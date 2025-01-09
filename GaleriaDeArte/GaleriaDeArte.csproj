@@ -143,6 +143,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="login.aspx" />
+    <Content Include="MostrarExposiciones.aspx" />
     <Content Include="Obras.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -211,6 +212,8 @@
   <ItemGroup>
     <Compile Include="AppCode\Artista.cs" />
     <Compile Include="AppCode\ArtistaDAL.cs" />
+    <Compile Include="AppCode\Exposiciones.cs" />
+    <Compile Include="AppCode\ExposicionesDAL.cs" />
     <Compile Include="AppCode\Obras.cs" />
     <Compile Include="AppCode\ObrasDAL.cs" />
     <Compile Include="AppCode\UsuarioDAL.cs" />
@@ -267,6 +270,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarExposiciones.aspx.cs">
+      <DependentUpon>MostrarExposiciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MostrarExposiciones.aspx.designer.cs">
+      <DependentUpon>MostrarExposiciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Obras.aspx.cs">
       <DependentUpon>Obras.aspx</DependentUpon>
