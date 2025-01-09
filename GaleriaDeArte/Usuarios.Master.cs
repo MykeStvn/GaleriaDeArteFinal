@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace GaleriaDeArte
 {
-    public partial class Contact : Page
+    public partial class Usuarios : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

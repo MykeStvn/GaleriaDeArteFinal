@@ -65,6 +65,35 @@ public class ArtistaDAL
         }
     }
 
+    public Artista ObtenerArtistaPorId(int id)
+    {
+        Artista artista = null;
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            using (SqlCommand command = new SqlCommand("sp_ObtenerArtistaPorId", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Id", id);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    artista = new Artista
+                    {
+                        Id = Convert.ToInt32(reader["id_art"]),
+                        Nombres = reader["nombres_art"].ToString(),
+                        Biografia = reader["biografía_art"].ToString(),
+                        Nacionalidad = reader["nacionalidad_art"].ToString(),
+                        FechaNacimiento = Convert.ToDateTime(reader["fecha_nacimiento_art"]),
+                        Foto = reader["foto_art"].ToString()
+                    };
+                }
+            }
+        }
+        return artista;
+    }
+
     // Método para actualizar un artista
     public void ActualizarArtista(Artista artista)
     {

@@ -11,7 +11,7 @@
             </div>
             <div class="form-group">
                 <asp:Label ID="lblDescripcion" runat="server" Text="Descripción de la Obra:" CssClass="form-label"></asp:Label>
-                <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtDescripcion" TextMode="MultiLine" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <div class="form-group">
                 <asp:Label ID="lblPrecio" runat="server" Text="Precio:" CssClass="form-label"></asp:Label>

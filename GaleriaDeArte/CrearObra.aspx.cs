@@ -27,7 +27,13 @@ namespace GaleriaDeArte
             ddlAutor.DataTextField = "Nombres";
             ddlAutor.DataValueField = "Id";
             ddlAutor.DataBind();
+
+            // Añadir el primer elemento después de enlazar los datos
+            ddlAutor.Items.Insert(0, new ListItem("Seleccione un autor", ""));
+
         }
+        
+        
 
         protected void btnCrear_Click(object sender, EventArgs e)
         {

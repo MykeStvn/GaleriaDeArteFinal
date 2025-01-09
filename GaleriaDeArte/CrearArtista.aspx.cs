@@ -63,6 +63,11 @@ namespace GaleriaDeArte
             var artistas = artistaDAL.ObtenerArtistas();
             args.IsValid = !artistas.Any(a => a.Dni == txtDni.Text);
         }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Artistas.aspx");
+        }
     }
 }
 

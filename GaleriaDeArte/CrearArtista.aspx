@@ -25,7 +25,7 @@
                 </div>
                 <div class="form-group">
                     <asp:Label ID="lblBiografia" runat="server" Text="Biografía:" CssClass="form-label"></asp:Label>
-                    <asp:TextBox ID="txtBiografia" runat="server" placeholder="Ingrese la biografía del artista" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtBiografia" TextMode="MultiLine" runat="server" placeholder="Ingrese la biografía del artista" CssClass="form-control"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <asp:Label ID="lblNacionalidad" runat="server" Text="Nacionalidad:" CssClass="form-label"></asp:Label>
@@ -55,8 +55,10 @@
                     <asp:TextBox ID="txtContrasena" runat="server" placeholder="Ingrese su contraseña" CssClass="form-control" TextMode="Password"></asp:TextBox>
                 </div>                
                 <asp:Button ID="btnCrear" runat="server" Text="Crear" OnClick="btnCrear_Click" CssClass="btn btn-primary" />
+                <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" CssClass="btn btn-danger" />
             </div>
         </div>
+            
     </form>
     <!-- Incluir Bootstrap JS y dependencias -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
